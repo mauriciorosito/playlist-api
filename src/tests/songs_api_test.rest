@@ -1,0 +1,32 @@
+@baseUrl =  http://localhost:3000
+@id_song = 3
+
+### Listar todas as músicas
+GET {{baseUrl}}/songs
+Content-Type: application/json
+
+### Criar uma nova música
+POST {{baseUrl}}/songs
+Content-Type: application/json
+
+{
+  "title": "Tocando em Frente",
+  "artist": "Almir Sater",
+  "album": "Raízes",
+  "year": 1991
+}
+
+### Atualizar uma música
+PUT {{baseUrl}}/songs/{{id_song}}
+Content-Type: application/json
+
+{
+  "title": "Tocando em Frente (Ao Vivo)",
+  "artist": "Almir Sater",
+  "album": "MTV Ao Vivo",
+  "year": 1992
+}
+
+### Deletar uma música
+DELETE {{baseUrl}}/songs/{{id_song}}
+Content-Type: application/json
