@@ -1,6 +1,15 @@
 const mysql = require("mysql2/promise");
 require("dotenv").config();
 
+// LOG de diagnóstico: mostra as variáveis que estão sendo lidas
+console.log("🔍 Lendo variáveis de ambiente para conexão com o banco:");
+console.log({
+  DB_HOST: process.env.DB_HOST,
+  DB_PORT: process.env.DB_PORT,
+  DB_USER: process.env.DB_USER,
+  DB_PASSWORD: process.env.DB_PASSWORD ? '***' : 'undefined',
+  DB_DATABASE: process.env.DB_DATABASE
+});
 
 // Cria a conexão com o banco
 const pool = mysql.createPool({
