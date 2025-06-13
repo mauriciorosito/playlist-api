@@ -1,4 +1,4 @@
-@baseUrl =  http://localhost:3000
+@baseUrl =  https://playlist-api-production-92c8.up.railway.app
 @id_song = 3
 
 ### Listar todas as músicas
